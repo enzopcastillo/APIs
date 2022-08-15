@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-lg-3 mt-5">
+            <textarea [(ngModel)]="text" name="text" class="textarea" cols="30" rows="3" placeholder="Inserte texto a traducir aqui."></textarea>
+            <br><br>
+            <label><strong>La url del audio es:</strong><br> {{resultado}}</label>
+            <br><br>
+            <button (click)="speech()" class="btn btn-primary">CONVERTIR</button>
+        </div>
+    </div>
+</div>

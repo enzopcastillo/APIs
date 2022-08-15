@@ -1,0 +1,32 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-6 offset-lg-3">
+            <div class="row">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Elegir signo:</label>
+                        <select [(ngModel)]="sign" name="sign" class="form-control" id="exampleFormControlSelect1">
+                          <option *ngFor="let item of signos" [value]="item.value">{{item.nombre}}</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Elegir dia:</label>
+                        <select [(ngModel)]="day" name="day" class="form-control" id="exampleFormControlSelect1">
+                          <option *ngFor="let item of dias" [value]="item.value">{{item.nombre}}</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label><strong>Description:</strong> {{description}}</label><br>
+                        <label><strong>Data range:</strong> {{date_range}}</label><br>
+                        <label><strong>Current date:</strong> {{current_date}}</label><br>
+                        <label><strong>Color:</strong> {{color}}</label>                            
+                    </div>
+                    <br>
+                    <button (click)="obtenerHoroscopo()" type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>

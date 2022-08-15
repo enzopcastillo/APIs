@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <ngb-carousel *ngFor="let item of noticias" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+                <ng-template ngbSlide >
+                  <div class="picsum-img-wrapper">
+                    <img src="{{item.urlToImage}}" alt="Random slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.description}}</p>
+                  </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+        <div class="col-12">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Accion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of noticias">
+                    <td>{{item.id}}</td>                    
+                    <td>{{item.title}}</td>                    
+                    <td>
+                        <button (click)="desactivarNoticia(item)" type="button" class="btn btn-warning btn-sm float-start">Editar</button>
+                        <button (click)="eliminarNoticia(item)" type="button" class="btn btn-warning btn-sm float-end">Eliminar</button>
+                    </td>                   
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+  

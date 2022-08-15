@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <table class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Division</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of teams">
+                  <th scope="row">{{item.id}}</th>
+                  <td>{{item.name | uppercase}}</td>
+                  <td>{{item.city}}</td>
+                  <td>{{item.division}}</td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Posicion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of players">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.first_name}}</td>
+            <td>{{item.last_name}}</td>
+            <td>{{item.position}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
